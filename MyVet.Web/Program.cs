@@ -5,8 +5,15 @@ using MyVet.Web.Data;
 
 namespace MyVet.Web
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Program
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
         public static void Main(string[] args)
         {
             var host = CreateWebHostBuilder(args).Build();
@@ -14,6 +21,10 @@ namespace MyVet.Web
             host.Run();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="host"></param>
         private static void RunSeeding(IWebHost host)
         {
             var scopeFactory = host.Services.GetService<IServiceScopeFactory>();
@@ -24,6 +35,11 @@ namespace MyVet.Web
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
             return WebHost.CreateDefaultBuilder(args).UseStartup<Startup>();
